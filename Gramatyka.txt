@@ -1,0 +1,28 @@
+start -> block* EOF
+block -> selectors INDENT assignments DEDENT 
+selectors -> selector [[symbol]? selector]*
+selector -> ((HASH | DOT | COLON | UNDERSCORE)? IDENTIFIER) | SPECIAL_IDENTIFIER) 
+symbol -> (ADD | CHILD | COMA | COLON)
+assignments -> assignment (SEMICOLON  assignment)* [SEMICOLON]? 
+assignment -> IDENTIFIER COLON (value)+ 
+value -> (URL | STRING | IDENTIFIER | IMPORTANT | HASH)
+
+
+('NEWLINE', r'\n[\t ]*'),                            
+('IMPORTANT', r'!important'),
+('URL', r'url\([^)]+\)'),                                                     
+('COLON', r'[ ]*:[ ]*'),                                                                                
+('ADD', r'[ ]*\+[ ]*'),              
+('CHILD', r'[ ]*>[ ]*'),                  
+('COMA', r','),
+('HASH', r'#'),                                      
+('SEMICOLON', r';'),
+('UNDERSCORE', r'_'),
+('STRING', r'\"[^"]*\"'),                                     
+('COMMENT', r'\/\/[^\n]*'),
+('IDENTIFIER', r'[A-Za-z0-9%-]+[ ]*'),
+('SPECIAL_IDENTIFIER', r'\*[ ]*'),
+('DOT', r'\.')     
+ 
+
+

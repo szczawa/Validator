@@ -1,0 +1,31 @@
+// to jest komentarz, np. z nazwą pliku: correct.ppap
+#abc                                                                   "#" oznacza selektor id, który identyfikuje konkretny element HTML na podstawie jego atrybutu id.
+	background: url(watch?v=Ct6BUPvE2sM);                           tłem jest obrazek z podanego linku
+	color: #f00;						        kolor tekstu 
+	box-shadow: none;						brak cieni box
+	text-shadow: none;           					brak cieni tekstu
+
+.def									selektor klasy, odnosi się do klas def
+	content: "see below";						treść elementu to see below
+
+p > pre									odnosi się do elemntów pre, które są dzieckiem p 
+	border: 1px solid #999;						ramka na granicy elemntu 1 pixel
+	page-break-inside: avoid;					unikanie podziału strony wewnątrz elemntu pre
+
+div + p,								elemnty p które są bezpośrednim sąsiadem div
+div > p									lub dzieckiem div
+	font-weight: bolder						wytłuszczenie tekstu
+
+p img									selektor img , który jest dzieckiem bądź "rodzajem" p 
+	max-width: 100% !important;					szerokość obrazka na 100        wyłączono wszystkie inne reguły
+
+pine + apple,								elemnty apple które są bezpośrednio sąsiadem pine
+* + * // * jest poprawnym selektorem					wszystie lementy które są sąsiadem dowolnego elelmntu
+	orphans: 3;							ustawiono liczbę linii wierszy, które powinny pozostać w tekście przed lub po wybranym elementem
+	widows: 3rem;
+
+a:visited								elemnty a które zostały już odwiedzone
+	color: white;							ustawiono kolor na biały 
+
+
+
